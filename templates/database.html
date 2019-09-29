@@ -1,0 +1,90 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=" {% static 'css/bootstrap.min.css'%} ">
+    <title>Database</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Database Veriler</h2>
+    <!--  Bu Tabloda Alternatif olarak kullanılabilir style ayarları yukarıdadır... -->
+    <!--table id='t01' style="width:80%">
+        <caption>Showing Database Data</caption>
+        <tr>
+            <th>Sistem Ismi</th>
+            <th>Tarih</th>
+            <th>data1</th>
+            <th>data2</th>
+            <th>data3</th>
+        </tr>
+        {% for data in datalar %}
+        <tr>
+            <td>{{ data.system_name }}</td>
+            <td>{{ data.publishing_date }}</td>
+            <td>{{ data.data1 }}</td>
+            <td>{{ data.data2 }} </td>
+            <td>{{ data.data3 }} </td>
+        </tr>
+        {% endfor %}
+
+    </table> -->
+
+    <table class="table table-striped" style="width:80%">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Sistem Ismi</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">Data1</th>
+                <th scope="col">Data2</th>
+                <th scope="col">Data3</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in datalar %}
+            <tr>
+                <th scope="row">{{ data.id }}</th>
+                <td>{{ data.system_name }}</td>
+                <td>{{ data.publishing_date }}</td>
+                <td>{{ data.data1 }}</td>
+                <td>{{ data.data2 }}</td>
+                <td>{{ data.data3 }}</td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</body>
+
+</html>
