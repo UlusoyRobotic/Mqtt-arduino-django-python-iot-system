@@ -22,10 +22,10 @@ data1=1             # sending datas
 data2=2
 data3=3
 
-broker_address= "soldier.cloudmqtt.com"  #Broker address
-port = 13921                         #Broker port
-user = "laoignzu"                    #Connection username
-password = "8j4Fd0mw1Gw8"            #Connection password
+broker_address= "*****************"  #Broker address
+port = *****                         #Broker port
+user = "********"                    #Connection username
+password = "************"            #Connection password
  
 client = mqttClient.Client()               #create new instance
 client.username_pw_set(user, password=password)    #set username and password
