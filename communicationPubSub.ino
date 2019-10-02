@@ -2,12 +2,12 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "TP-Link_E5F8";                   // wifi ssid
-const char* password =  "23276154";         // wifi password
-const char* mqttServer = "soldier.cloudmqtt.com";    // IP adress Raspberry Pi
-const int mqttPort = 13921;
-const char* mqttUser = "laoignzu";      // if you don't have MQTT Username, no need input
-const char* mqttPassword = "8j4Fd0mw1Gw8";  // if you don't have MQTT Password, no need input
+const char* ssid = "TP-********";                   // wifi ssid
+const char* password =  "**********";         // wifi password
+const char* mqttServer = "****.******.----";    // IP adress Raspberry Pi
+const int mqttPort = *****;
+const char* mqttUser = "*****";      // if you don't have MQTT Username, no need input
+const char* mqttPassword = "*********";  // if you don't have MQTT Password, no need input
 char data[50];
 int data1=0;
 int data2=0;
